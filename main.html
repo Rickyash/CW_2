@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="holidayComposite.js"></script>
+  <script src="weatherComposite.js"></script>
+  <script src="hotelComposite.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="text-center my-4">Assignment 2</h1>
+    </div>
+    <div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="Countrycode">Country CODE:</label>
+        <input type="text" id="Countrycode" name="country" class="form-control">
+      </div>
+      <button type="button" onclick="getholiday()" class="btn btn-primary">Get Holiday List</button>
+    </div>
+    <div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" class="form-control">
+      </div>
+      <button type="button" onclick="getweather()" class="btn btn-primary">Get Weather</button>
+
+      <form>
+        <div class="form-group">
+          <label for="checkin">Check-in Date:</label>
+          <input type="date" id="checkin" name="checkin" value="2023-09-27" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="checkout">Check-out Date:</label>
+          <input type="date" id="checkout" name="checkout" value="2023-09-28" class="form-control">
+        </div>
+        <button type="button" onclick="getAllHotel()" class="btn btn-primary">Get hotel list</button>
+      </form>
+    </div>
+    <h2 class="mt-4">Holiday List:</h2>
+    <h3 class="mt-4"></h3>(Clicking it to update checkin and checkout time)
+    <ul id="holiday-list" class="list-group mb-4"></ul>
+    <h2>Hotel List:</h2>
+    <div id="hotellist" class="mb-4"></div>
+    <h2>Weather Forecast:</h2>
+    <div id="weatherlist"></div>
+  </div>
+</body>
+</html>
